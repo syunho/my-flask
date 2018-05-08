@@ -1,10 +1,13 @@
-<h1>This is the about page</h1>
-
-Hi this is the about page
-
-<ol>
-<li>this is an about list
-
-</li>
-<li>With two items</li>
-</ol>
+<!DOCTYPE html>
+<html>
+<head>
+    <title></titel>
+</head>
+<body>
+    {% for post in posts %}
+        <h1>{{ post.title }}</h1>
+	<p>By {{ post.author }} on {{ post.date_posted }}</p>
+	<p>{{ post.content }}</p>
+    {% endfor %}
+</body>
+</html>
